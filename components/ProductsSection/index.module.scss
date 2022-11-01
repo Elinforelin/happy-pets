@@ -1,0 +1,25 @@
+@mixin sectionTitle {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+}
+.container{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .titlePurple{
+    @include sectionTitle;
+    color: #a84aff;
+  }
+  .titleRed{
+    @include sectionTitle;
+    color: #ff4a4a;
+  }
+  .productsContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+}

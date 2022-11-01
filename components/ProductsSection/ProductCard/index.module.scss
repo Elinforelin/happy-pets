@@ -1,0 +1,54 @@
+@mixin typography {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+}
+.root {
+    max-width: 322px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 1px 10px grey;
+    margin: 10px;
+    position: relative;
+    @media (max-width: 770px) {
+      max-width: 250px;
+    }
+  .cardMediaRoot{
+    max-height: 250px;
+    img{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+    .sizeContainer{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: 10px;
+
+      .typographyRootSize{
+        @include typography;
+        justify-content: start;
+        text-align: center;
+
+      }
+    }
+  .typographyRootMoreInfo{
+    @include typography;
+    @media (max-width: 770px) {
+      font-size: 11px;
+    }
+  }
+  .typographyRoot {
+    @include typography;
+      text-align: center;
+      justify-content: center;
+    }
+  }
