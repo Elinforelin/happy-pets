@@ -16,6 +16,9 @@
     @media (max-width: 770px) {
       max-width: 250px;
     }
+    @media (max-width: 630px) {
+      max-width: 150px;
+    }
   .cardMediaRoot{
     max-height: 250px;
     img{
@@ -40,6 +43,20 @@
 
       }
     }
+  .typographyRootTitle{
+    @include typography;
+    text-align: center;
+    @media (max-width: 630px) {
+      font-size: 18px;
+    }
+  }.typographyRootPrice{
+    @include typography;
+    text-align: center;
+    justify-content: center;
+    @media (max-width: 630px) {
+      font-size: 18px;
+    }
+  }
   .typographyRootMoreInfo{
     @include typography;
     @media (max-width: 770px) {

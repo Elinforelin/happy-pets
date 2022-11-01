@@ -11,7 +11,6 @@ import { StaticImageData } from "next/image";
 import TelegramIcon from "@mui/icons-material/Telegram";
 
 import classes from "./index.module.scss";
-import { colors } from "../../../constants/colors";
 
 type ProductCardProps = {
   id: number;
@@ -47,7 +46,7 @@ const ProductCard: FC<ProductCardProps> = ({
           variant="h5"
           component="div"
           height="50"
-          classes={{ root: classes.typographyRoot }}
+          classes={{ root: classes.typographyRootTitle }}
         >
           {title}
         </Typography>
@@ -82,7 +81,7 @@ const ProductCard: FC<ProductCardProps> = ({
           gutterBottom
           variant="h4"
           component="div"
-          classes={{ root: classes.typographyRoot }}
+          classes={{ root: classes.typographyRootPrice }}
         >
           {price} грн
         </Typography>
