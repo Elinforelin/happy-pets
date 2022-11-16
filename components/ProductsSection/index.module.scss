@@ -2,6 +2,9 @@
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
+  @media (max-width: 770px) {
+    font-size: 30px;
+  }
 }
 .container{
   margin: 20px;

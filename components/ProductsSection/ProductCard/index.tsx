@@ -11,17 +11,13 @@ import { StaticImageData } from "next/image";
 import TelegramIcon from "@mui/icons-material/Telegram";
 
 import classes from "./index.module.scss";
+import { ProductSize } from "./ProductSize";
+import { ProductSizeType } from "../../../constants/products";
 
 type ProductCardProps = {
   id: number;
   title: string;
-  size: {
-    length?: string;
-    volume?: string;
-    diameter?: string;
-    width?: string;
-    height?: string;
-  };
+  size: ProductSizeType[];
   image: StaticImageData;
   price: number;
 };
@@ -52,30 +48,15 @@ const ProductCard: FC<ProductCardProps> = ({
         </Typography>
 
         <div className={classes.sizeContainer}>
-          <Typography
-            // gutterBottom
-            variant="subtitle1"
-            component="div"
-            classes={{ root: classes.typographyRootSize }}
-          >
-            Довжина {size.length}
-          </Typography>
-          <Typography
-            // gutterBottom
-            variant="subtitle1"
-            component="div"
-            classes={{ root: classes.typographyRootSize }}
-          >
-            Ширина {size.width}
-          </Typography>
-          <Typography
-            gutterBottom
-            variant="subtitle1"
-            component="div"
-            classes={{ root: classes.typographyRootSize }}
-          >
-            Висота {size.height}
-          </Typography>
+          {size.map(({ name, productSize }) => (
+            <>
+              <ProductSize
+                name={name}
+                productSize={productSize}
+                key={productSize}
+              />
+            </>
+          ))}
         </div>
         <Typography
           gutterBottom

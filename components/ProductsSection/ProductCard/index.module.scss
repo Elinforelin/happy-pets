@@ -2,6 +2,7 @@
   font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .root {
     max-width: 322px;
@@ -9,16 +10,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    box-shadow: 2px 1px 10px grey;
+    border-radius: 20px !important;
+    box-shadow: 2px 1px 10px grey !important;
     margin: 10px;
     position: relative;
     @media (max-width: 770px) {
       max-width: 250px;
     }
-    @media (max-width: 630px) {
-      max-width: 150px;
-    }
+    //@media (max-width: 630px) {
+    //  max-width: 150px;
+    //}
   .cardMediaRoot{
     max-height: 250px;
     img{
@@ -40,13 +41,16 @@
         @include typography;
         justify-content: start;
         text-align: center;
-
+        @media (max-width: 770px) {
+          font-size: 14px;
+        }
       }
     }
   .typographyRootTitle{
     @include typography;
     text-align: center;
-    @media (max-width: 630px) {
+    height: 70px;
+    @media (max-width: 770px) {
       font-size: 18px;
     }
   }.typographyRootPrice{
